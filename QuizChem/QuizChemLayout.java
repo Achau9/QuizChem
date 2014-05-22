@@ -3,16 +3,16 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- * Class QuizChemLayout - write a description of the class here
+ * Class QuizChem - write a description of the class here
  * 
  * @author (your name) 
  * @version (a version number)
  */
-public class QuizChemLayout extends JApplet
+public class QuizChem extends JApplet
 {
     // instance variables - replace the example below with your own
     private int x;
-
+    private JButton buttonT;
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -26,7 +26,9 @@ public class QuizChemLayout extends JApplet
         // on startup to check access. May not be necessary with your browser. 
         JRootPane rootPane = this.getRootPane();    
         rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
-    
+        buttonT= new JButton ("Test");
+        
+        add(buttonT);
         // provide any initialisation necessary for your JApplet
     }
 
@@ -53,11 +55,12 @@ public class QuizChemLayout extends JApplet
         // is replaced by another page or before JApplet is destroyed 
     }
 
+    /*
     /**
      * Paint method for applet.
      * 
      * @param  g   the Graphics object for this applet
-     */
+     
     public void paint(Graphics g)
     {
         // simple text displayed on applet
@@ -68,7 +71,7 @@ public class QuizChemLayout extends JApplet
         g.setColor(Color.blue);
         g.drawString("created by BlueJ", 20, 40);
     }
-
+     */
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * is being reclaimed and that it should destroy any resources that it
