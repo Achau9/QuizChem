@@ -1,7 +1,7 @@
 
 import java.awt.*;
 import javax.swing.*;
-
+import javax.swing.BoxLayout;
 /**
  * Class QuizChem - write a description of the class here
  * 
@@ -12,7 +12,8 @@ public class QuizChem extends JApplet
 {
     // instance variables - replace the example below with your own
     private int x;
-    private JButton buttonT;
+    private JButton buttonA,buttonB,buttonC,buttonD;
+ 
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -26,9 +27,16 @@ public class QuizChem extends JApplet
         // on startup to check access. May not be necessary with your browser. 
         JRootPane rootPane = this.getRootPane();    
         rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
-        buttonT= new JButton ("Test");
-        
-        add(buttonT);
+        buttonA= new JButton ("A)");
+        buttonB= new JButton ("B)");
+        buttonC= new JButton ("C)");
+        buttonD= new JButton ("D)");
+        BoxLayout BL = new BoxLayout(rootPane,BoxLayout.Y_AXIS);
+        rootPane.setLayout(BL);
+        rootPane.add(buttonA);
+        rootPane.add(buttonB);
+        rootPane.add(buttonC);
+        rootPane.add(buttonD);
         // provide any initialisation necessary for your JApplet
     }
 
