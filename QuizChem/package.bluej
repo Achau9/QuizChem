@@ -1,3 +1,36 @@
 #BlueJ package file
-#Thu May 22 15:02:00 EDT 2014
+package.editor.height=400
+package.editor.width=560
+package.editor.x=912
+package.editor.y=299
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+target1.appletHeight=500
+target1.appletWidth=500
+target1.editor.height=700
+target1.editor.width=900
+target1.editor.x=885
+target1.editor.y=117
+target1.height=50
+target1.name=QuizChem
+target1.numberAppletParameters=0
+target1.showInterface=false
+target1.type=AppletTarget
+target1.width=90
+target1.x=70
+target1.y=10
+target2.editor.height=700
+target2.editor.width=900
+target2.editor.x=952
+target2.editor.y=284
+target2.height=50
+target2.name=CitiBikeData
+target2.naviview.expanded=true
+target2.showInterface=false
+target2.type=ClassTarget
+target2.width=100
+target2.x=170
+target2.y=10

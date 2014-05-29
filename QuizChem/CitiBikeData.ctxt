@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CitiBikeData()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ CitiBikeData\n
+comment1.params=
+comment1.target=void\ initArrays()
+comment2.params=
+comment2.target=void\ printID()
+comment3.params=
+comment3.target=void\ printAllAvailiableBike()
+numComments=4
