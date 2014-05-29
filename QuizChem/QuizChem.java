@@ -2,6 +2,7 @@
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.BoxLayout;
+
 /**
  * Class QuizChem - write a description of the class here
  * 
@@ -13,7 +14,9 @@ public class QuizChem extends JApplet
     // instance variables - replace the example below with your own
     private int x;
     private JButton buttonA,buttonB,buttonC,buttonD;
- 
+    private JTextField text;
+    private CitiBike[] allQuestions;
+    
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -37,6 +40,12 @@ public class QuizChem extends JApplet
         rootPane.add(buttonB);
         rootPane.add(buttonC);
         rootPane.add(buttonD);
+        
+        allQuestions = new CitiBike[1];
+
+        allQuestions[0] = new CitiBike("Blah");
+        
+        text = new JTextField(allQuestions[0].getQS());
         // provide any initialisation necessary for your JApplet
     }
 
