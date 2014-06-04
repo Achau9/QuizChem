@@ -1,65 +1,72 @@
-
+import static java.lang.System.out;
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
- * Class QuizChem - write a description of the class here
+ * Class Applet - write a description of the class here
  * 
  * @author (your name) 
  * @version (a version number)
  */
-public class QuizChem extends JApplet
-{
+public class Applet extends JApplet{
     // instance variables - replace the example below with your own
     private int x;
-    private JButton buttonA,buttonB,buttonC,buttonD;
-    private JTextField text;
-    private CitiBike[] allQuestions;
-    
+    private JButton buttonA;
+    private JButton buttonB;
+    private JButton buttonC;
+    private JButton buttonD;
+
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
      * time that the start method is called.
      */
-    public void init()
-    {
+    public void init(){
         // this is a workaround for a security conflict with some browsers
         // including some versions of Netscape & Internet Explorer which do 
         // not allow access to the AWT system event queue which JApplets do 
         // on startup to check access. May not be necessary with your browser. 
+        
         JRootPane rootPane = this.getRootPane();    
         rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
-        buttonA= new JButton ("A)");
-        buttonB= new JButton ("B)");
-        buttonC= new JButton ("C)");
-        buttonD= new JButton ("D)");
-        BoxLayout BL = new BoxLayout(rootPane,BoxLayout.Y_AXIS);
-        rootPane.setLayout(BL);
+        BoxLayout Alston = new BoxLayout(rootPane,BoxLayout.Y_AXIS);
+        rootPane.setLayout(Alston);
+        buttonA = new JButton("A)");
+        buttonB = new JButton("B)");
+        buttonC = new JButton("C)");
+        buttonD = new JButton("D)");
         rootPane.add(buttonA);
         rootPane.add(buttonB);
         rootPane.add(buttonC);
         rootPane.add(buttonD);
-        
-        allQuestions = new CitiBike[1];
-
-        allQuestions[0] = new CitiBike("Blah");
-        
-        text = new JTextField(allQuestions[0].getQS());
-        // provide any initialisation necessary for your JApplet
+       // buttonA.addActionListener(new ActionListener(){
+       //  public void actionPerformed(ActionEvent arg0) {
+       //         JOptionPane.showMessageDialog(null, "Hello World");
+       
+       //       }
+       //   }); Make the JButton Print out
     }
+            
+        // provide any initialisation necessary for your JApplet
+    
+    
 
     /**
      * Called by the browser or applet viewer to inform this JApplet that it 
      * should start its execution. It is called after the init method and 
      * each time the JApplet is revisited in a Web page. 
      */
-    public void start()
-    {
+    public void start(){
         // provide any code requred to run each time 
         // web page is visited
     }
-
+    
     /** 
      * Called by the browser or applet viewer to inform this JApplet that
      * it should stop its execution. It is called when the Web page that
@@ -71,7 +78,6 @@ public class QuizChem extends JApplet
         // provide any code that needs to be run when page
         // is replaced by another page or before JApplet is destroyed 
     }
-
     /*
     /**
      * Paint method for applet.
@@ -88,7 +94,8 @@ public class QuizChem extends JApplet
         g.setColor(Color.blue);
         g.drawString("created by BlueJ", 20, 40);
     }
-     */
+    */
+   
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * is being reclaimed and that it should destroy any resources that it
