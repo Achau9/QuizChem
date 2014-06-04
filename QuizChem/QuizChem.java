@@ -2,7 +2,9 @@
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.BoxLayout;
-
+import java.util.*;
+import java.io.*;
+import javax.swing.JTextField;
 /**
  * Class QuizChem - write a description of the class here
  * 
@@ -17,6 +19,7 @@ public class QuizChem extends JApplet
     private JTextField text;
     private CitiBike[] allQuestions;
     
+    private TextField Questions;
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -28,6 +31,7 @@ public class QuizChem extends JApplet
         // including some versions of Netscape & Internet Explorer which do 
         // not allow access to the AWT system event queue which JApplets do 
         // on startup to check access. May not be necessary with your browser. 
+        
         JRootPane rootPane = this.getRootPane();    
         rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
         buttonA= new JButton ("A)");
@@ -41,14 +45,20 @@ public class QuizChem extends JApplet
         rootPane.add(buttonC);
         rootPane.add(buttonD);
         
-        allQuestions = new CitiBike[1];
-
-        allQuestions[0] = new CitiBike("Blah");
         
-        text = new JTextField(allQuestions[0].getQS());
+        Questions = new TextField(15); 
+        Questions.setHorizontalAlignment(JTextField.CENTER);
+        add(new Label("What is an atom?"));
+         
+       // allQuestions = new CitiBike[0];
+
+        //allQuestions[0] = new CitiBike("Something");
+        
+        //text = new JTextField(allQuestions[0].getQS());
         // provide any initialisation necessary for your JApplet
     }
-
+    
+    
     /**
      * Called by the browser or applet viewer to inform this JApplet that it 
      * should start its execution. It is called after the init method and 
